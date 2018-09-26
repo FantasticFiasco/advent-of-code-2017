@@ -1,17 +1,18 @@
-using System.Linq;
+﻿using System.Linq;
 using Shouldly;
 using Xunit;
 
 namespace AdventOfCode.Day1
 {
-    public class PartOneShould
+    public class PartTwoShould
     {
         [Theory]
-        [InlineData("1122", 3)]
-        [InlineData("1111", 4)]
-        [InlineData("1234", 0)]
-        [InlineData("91212129", 9)]
-        [InlineData(Input, 1069)]
+        [InlineData("1212", 6)]
+        [InlineData("1221", 0)]
+        [InlineData("123425", 4)]
+        [InlineData("123123", 12)]
+        [InlineData("12131415", 4)]
+        [InlineData(Input, 1268)]
         public void Satisfy(string sequence, int expected)
         {
             // Arrange
@@ -21,7 +22,7 @@ namespace AdventOfCode.Day1
                 .ToArray();
 
             // Act
-            var actual = PartOne.Solve(input);
+            var actual = PartTwo.Solve(input);
 
             // Assert
             actual.ShouldBe(expected);

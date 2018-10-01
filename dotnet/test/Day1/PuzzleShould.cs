@@ -15,10 +15,10 @@ namespace AdventOfCode.Day1
         public void SolvePart1(string sequence, int expected)
         {
             // Act
-            var actual = Puzzle.SolvePart1(ToNumberArray(sequence));
+            var output = Puzzle.SolvePart1(ToNumberArray(sequence));
 
             // Assert
-            actual.ShouldBe(expected);
+            output.ShouldBe(expected);
         }
 
         [Theory]
@@ -31,10 +31,10 @@ namespace AdventOfCode.Day1
         public void SolvePart2(string sequence, int expected)
         {
             // Act
-            var actual = Puzzle.SolvePart2(ToNumberArray(sequence));
+            var output = Puzzle.SolvePart2(ToNumberArray(sequence));
 
             // Assert
-            actual.ShouldBe(expected);
+            output.ShouldBe(expected);
         }
 
         private static int[] ToNumberArray(string sequence) =>

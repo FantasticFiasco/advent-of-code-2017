@@ -20,4 +20,10 @@
     <ProjectReference Include="..\src\AdventOfCode.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Day4\Input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

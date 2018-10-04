@@ -7,6 +7,26 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+func TestSolvePart1GivenExamples(t *testing.T) {
+	samples := []struct {
+		input    string
+		expected int
+	}{
+		{"1122", 3},
+		{"1111", 4},
+		{"1234", 0},
+		{"91212129", 9},
+	}
+
+	for _, sample := range samples {
+		input := toNumberArray(sample.input)
+
+		output := day1.SolvePart1(input)
+
+		assert.Equal(t, sample.expected, output)
+	}
+}
+
 func TestSolvePart1(t *testing.T) {
 	input := toNumberArray(input)
 
@@ -15,36 +35,25 @@ func TestSolvePart1(t *testing.T) {
 	assert.Equal(t, 1069, output)
 }
 
-func TestSolvePart1GivenExample1(t *testing.T) {
-	input := toNumberArray("1122")
+func TestSolvePart2GivenExamples(t *testing.T) {
+	samples := []struct {
+		input    string
+		expected int
+	}{
+		{"1212", 6},
+		{"1221", 0},
+		{"123425", 4},
+		{"123123", 12},
+		{"12131415", 4},
+	}
 
-	output := day1.SolvePart1(input)
+	for _, sample := range samples {
+		input := toNumberArray(sample.input)
 
-	assert.Equal(t, 3, output)
-}
+		output := day1.SolvePart2(input)
 
-func TestSolvePart1GivenExample2(t *testing.T) {
-	input := toNumberArray("1111")
-
-	output := day1.SolvePart1(input)
-
-	assert.Equal(t, 4, output)
-}
-
-func TestSolvePart1GivenExample3(t *testing.T) {
-	input := toNumberArray("1234")
-
-	output := day1.SolvePart1(input)
-
-	assert.Equal(t, 0, output)
-}
-
-func TestSolvePart1GivenExample4(t *testing.T) {
-	input := toNumberArray("91212129")
-
-	output := day1.SolvePart1(input)
-
-	assert.Equal(t, 9, output)
+		assert.Equal(t, sample.expected, output)
+	}
 }
 
 func TestSolvePart2(t *testing.T) {
@@ -53,46 +62,6 @@ func TestSolvePart2(t *testing.T) {
 	output := day1.SolvePart2(input)
 
 	assert.Equal(t, 1268, output)
-}
-
-func TestSolvePart2GivenExample1(t *testing.T) {
-	input := toNumberArray("1212")
-
-	output := day1.SolvePart2(input)
-
-	assert.Equal(t, 6, output)
-}
-
-func TestSolvePart2GivenExample2(t *testing.T) {
-	input := toNumberArray("1221")
-
-	output := day1.SolvePart2(input)
-
-	assert.Equal(t, 0, output)
-}
-
-func TestSolvePart2GivenExample3(t *testing.T) {
-	input := toNumberArray("123425")
-
-	output := day1.SolvePart2(input)
-
-	assert.Equal(t, 4, output)
-}
-
-func TestSolvePart2GivenExample4(t *testing.T) {
-	input := toNumberArray("123123")
-
-	output := day1.SolvePart2(input)
-
-	assert.Equal(t, 12, output)
-}
-
-func TestSolvePart2GivenExample5(t *testing.T) {
-	input := toNumberArray("12131415")
-
-	output := day1.SolvePart2(input)
-
-	assert.Equal(t, 4, output)
 }
 
 func toNumberArray(sequence string) []int {

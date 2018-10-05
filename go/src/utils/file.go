@@ -3,9 +3,10 @@ package file
 import (
 	"io/ioutil"
 	"path/filepath"
+	"strings"
 )
 
-func ReadLines(filename string) string {
+func ReadLines(filename string) []string {
 	path := filepath.Join("testdata", filename)
 	bytes, err := ioutil.ReadFile(path)
 
@@ -13,5 +14,5 @@ func ReadLines(filename string) string {
 		panic(err)
 	}
 
-	return string(bytes)
+	return strings.Split(string(bytes), "\n")
 }

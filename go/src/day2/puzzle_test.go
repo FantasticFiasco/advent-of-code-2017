@@ -11,7 +11,7 @@ import (
 )
 
 func TestSolvePart1GivenExample(t *testing.T) {
-	input := toNumberArray("5 1 9 5\n7 5 3\n2 4 6 8")
+	input := toNumberArray([]string{"5 1 9 5", "7 5 3", "2 4 6 8"})
 
 	output := day2.SolvePart1(input)
 
@@ -27,7 +27,7 @@ func TestSolvePart1(t *testing.T) {
 }
 
 func TestSolvePart2GivenExample(t *testing.T) {
-	input := toNumberArray("5 9 2 8\n9 4 7 3\n3 8 6 5")
+	input := toNumberArray([]string{"5 9 2 8", "9 4 7 3", "3 8 6 5"})
 
 	output := day2.SolvePart2(input)
 
@@ -42,10 +42,8 @@ func TestSolvePart2(t *testing.T) {
 	assert.Equal(t, 267, output)
 }
 
-func toNumberArray(input string) [][]int {
+func toNumberArray(rows []string) [][]int {
 	numberArray := [][]int{}
-
-	rows := strings.Split(input, "\n")
 
 	for _, row := range rows {
 		numbers := []int{}

@@ -24,7 +24,7 @@ namespace AdventOfCode.Day4
         public void SolvePart1()
         {
             // Arrange
-            var passphrases = File.ReadAllLines(@"Day4\Input.txt");
+            var passphrases = File.ReadAllLines(Path.Combine("Day4", "Input.txt"));
 
             // Act
             var validPassphrases = passphrases
@@ -54,7 +54,7 @@ namespace AdventOfCode.Day4
         public void SolvePart2()
         {
             // Arrange
-            var passphrases = File.ReadAllLines(@"Day4\Input.txt");
+            var passphrases = File.ReadAllLines(Path.Join("Day4", "Input.txt"));
 
             // Act
             var validPassphrases = passphrases

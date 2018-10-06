@@ -1,5 +1,3 @@
-using System.Linq;
-
 namespace AdventOfCode.Day5
 {
     public static class Puzzle

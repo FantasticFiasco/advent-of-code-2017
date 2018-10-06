@@ -1,3 +1,6 @@
 [*.cs]
 indent_style = space
 indent_size = 4
+
+[input.txt]
+insert_final_newline = false

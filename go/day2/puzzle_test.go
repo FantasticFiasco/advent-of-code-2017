@@ -1,12 +1,12 @@
 package day2_test
 
 import (
-	"day2"
 	"strconv"
 	"strings"
 	"testing"
-	"utils"
 
+	"github.com/FantasticFiasco/advent-of-code-2017/day2"
+	"github.com/FantasticFiasco/advent-of-code-2017/utils"
 	"github.com/stretchr/testify/assert"
 )
 

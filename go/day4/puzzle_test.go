@@ -1,10 +1,10 @@
 package day4_test
 
 import (
-	"day4"
 	"testing"
-	"utils"
 
+	"github.com/FantasticFiasco/advent-of-code-2017/day4"
+	"github.com/FantasticFiasco/advent-of-code-2017/utils"
 	"github.com/stretchr/testify/assert"
 )
 

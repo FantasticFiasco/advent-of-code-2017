@@ -1,11 +1,19 @@
-pool:
-  vmImage: 'Ubuntu 16.04'
+jobs:
 
-steps:
+- job: Dotnet
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  steps:
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: test
+      projects: '**/*.Test.csproj'
+      arguments: '--configuration Release'
+      workingDirectory: 'dotnet'
 
-- task: DotNetCoreCLI@2
-  inputs:
-    command: test
-    projects: 'dotnet/**/*.Test.csproj'
-    arguments: '--configuration Release'
-  displayName: 'Build and test in .NET Core'
+- job: Go
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  steps:
+  - script: go test ./...
+    workingDirectory: 'go'

@@ -1,9 +1,9 @@
 package day1_test
 
 import (
-	"day1"
 	"testing"
 
+	"github.com/FantasticFiasco/advent-of-code-2017/day1"
 	"github.com/stretchr/testify/assert"
 )
 

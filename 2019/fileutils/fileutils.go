@@ -7,6 +7,15 @@ import (
 	"strings"
 )
 
+func ReadString(filename string) string {
+	path := filepath.Join("testdata", filename)
+	bytes, err := ioutil.ReadFile(path)
+	if err != nil {
+		panic(err)
+	}
+	return string(bytes)
+}
+
 func ReadStrings(filename string) []string {
 	path := filepath.Join("testdata", filename)
 	bytes, err := ioutil.ReadFile(path)

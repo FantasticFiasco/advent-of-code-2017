@@ -29,6 +29,7 @@ the mass of each module (your puzzle input), then add together all the fuel valu
 
 What is the sum of the fuel requirements for all of the modules on your spacecraft?
 */
+
 func SolvePart1(masses []int) int {
 	fuel := 0
 	for _, mass := range masses {
@@ -60,6 +61,7 @@ The fuel required by a module of mass 100756 and its fuel is:
 What is the sum of the fuel requirements for all of the modules on your spacecraft when also taking into account the
 mass of the added fuel? (Calculate the fuel requirements for each module separately, then add them all up at the end.)
  */
+
 func SolvePart2(masses []int) int {
 	fuel := 0
 	for _, mass := range masses {

@@ -73,12 +73,12 @@ Once you have a working computer, the first step is to restore the gravity assis
 "1202 program alarm" state it had just before the last computer caught fire. To do this, before running the program,
 replace position 1 with the value 12 and replace position 2 with the value 2. What value is left at position 0 after the
 program halts?
- */
+*/
 
 const (
-	add = 1
+	add      = 1
 	multiply = 2
-	exit = 99
+	exit     = 99
 )
 
 func SolvePart1(numbers []int) []int {
@@ -133,7 +133,7 @@ words, don't reuse memory from a previous attempt.
 
 Find the input noun and verb that cause the program to produce the output 19690720. What is 100 * noun + verb? (For
 example, if noun=12 and verb=2, the answer would be 1202.)
- */
+*/
 
 func SolvePart2(memory []int, searchedOutput int) (int, int) {
 	for noun := 0; noun < 100; noun++ {

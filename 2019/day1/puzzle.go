@@ -60,7 +60,7 @@ The fuel required by a module of mass 100756 and its fuel is:
 
 What is the sum of the fuel requirements for all of the modules on your spacecraft when also taking into account the
 mass of the added fuel? (Calculate the fuel requirements for each module separately, then add them all up at the end.)
- */
+*/
 
 func SolvePart2(masses []int) int {
 	fuel := 0
@@ -78,7 +78,7 @@ func SolvePart2(masses []int) int {
 }
 
 func calculateRequiredAmountOfFuel(mass int) int {
-	return mass / 3 - 2
+	return mass/3 - 2
 }
 
 func sum(values []int) int {
@@ -97,5 +97,5 @@ func max(x, y int) int {
 }
 
 func last(values []int) int {
-	return values[len(values) - 1]
+	return values[len(values)-1]
 }

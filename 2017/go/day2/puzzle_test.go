@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/FantasticFiasco/advent-of-code-2017/day2"
-	"github.com/FantasticFiasco/advent-of-code-2017/utils"
+	"github.com/FantasticFiasco/advent-of-code/2017/go/day2"
+	"github.com/FantasticFiasco/advent-of-code/2017/go/fileutils"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -19,7 +19,7 @@ func TestSolvePart1GivenExample(t *testing.T) {
 }
 
 func TestSolvePart1(t *testing.T) {
-	input := toNumberArray(file.ReadLines("input"))
+	input := toNumberArray(fileutils.ReadLines("input"))
 
 	output := day2.SolvePart1(input)
 
@@ -35,7 +35,7 @@ func TestSolvePart2GivenExample(t *testing.T) {
 }
 
 func TestSolvePart2(t *testing.T) {
-	input := toNumberArray(file.ReadLines("input"))
+	input := toNumberArray(fileutils.ReadLines("input"))
 
 	output := day2.SolvePart2(input)
 

@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/FantasticFiasco/advent-of-code-2017/day6"
-	"github.com/FantasticFiasco/advent-of-code-2017/utils"
+	"github.com/FantasticFiasco/advent-of-code/2017/go/day6"
+	"github.com/FantasticFiasco/advent-of-code/2017/go/fileutils"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -17,7 +17,7 @@ func TestSolvePart1GivenExample(t *testing.T) {
 }
 
 func TestSolvePart1(t *testing.T) {
-	memoryBanks := toNumberArray(file.ReadLines("input"))
+	memoryBanks := toNumberArray(fileutils.ReadLines("input"))
 
 	redistributionCycles := day6.SolvePart1(memoryBanks)
 
@@ -25,13 +25,13 @@ func TestSolvePart1(t *testing.T) {
 }
 
 func TestSolvePart2GivenExample(t *testing.T) {
-	var redistributionCycles = day6.SolvePart2([]int{2, 4, 1, 2});
+	var redistributionCycles = day6.SolvePart2([]int{2, 4, 1, 2})
 
 	assert.Equal(t, 4, redistributionCycles)
 }
 
 func TestSolvePart2(t *testing.T) {
-	var redistributionCycles = day6.SolvePart2([]int{14, 13, 12, 11, 9, 8, 8, 6, 6, 4, 4, 3, 1, 1, 0, 12});
+	var redistributionCycles = day6.SolvePart2([]int{14, 13, 12, 11, 9, 8, 8, 6, 6, 4, 4, 3, 1, 1, 0, 12})
 
 	assert.Equal(t, 1037, redistributionCycles)
 }

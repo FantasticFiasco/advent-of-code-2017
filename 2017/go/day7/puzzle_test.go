@@ -1,13 +1,13 @@
 package day7_test
 
 import (
+	"github.com/FantasticFiasco/advent-of-code/2017/go/fileutils"
 	"regexp"
 	"strconv"
 	"strings"
 	"testing"
 
-	"github.com/FantasticFiasco/advent-of-code-2017/day7"
-	"github.com/FantasticFiasco/advent-of-code-2017/utils"
+	"github.com/FantasticFiasco/advent-of-code/2017/go/day7"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -86,7 +86,7 @@ func TestSolvePart1GivenExample(t *testing.T) {
 }
 
 func TestSolvePart1(t *testing.T) {
-	programs := toProgramArray(file.ReadLines("input"))
+	programs := toProgramArray(fileutils.ReadLines("input"))
 
 	bottomProgram := day7.SolvePart1(programs)
 

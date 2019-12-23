@@ -3,8 +3,8 @@ package day4_test
 import (
 	"testing"
 
-	"github.com/FantasticFiasco/advent-of-code-2017/day4"
-	"github.com/FantasticFiasco/advent-of-code-2017/utils"
+	"github.com/FantasticFiasco/advent-of-code/2017/go/day4"
+	"github.com/FantasticFiasco/advent-of-code/2017/go/fileutils"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -26,7 +26,7 @@ func TestSolvePart1GivenExamples(t *testing.T) {
 }
 
 func TestSolvePart1(t *testing.T) {
-	passphrases := file.ReadLines("input")
+	passphrases := fileutils.ReadLines("input")
 
 	validPassphrasCount := 0
 
@@ -61,7 +61,7 @@ func TestSolvePart2GivenExamples(t *testing.T) {
 }
 
 func TestSolvePart2(t *testing.T) {
-	passphrases := file.ReadLines("input")
+	passphrases := fileutils.ReadLines("input")
 
 	validPassphrasCount := 0
 
